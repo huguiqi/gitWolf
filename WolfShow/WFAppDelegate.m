@@ -13,6 +13,7 @@
 - (void)dealloc
 {
     [_window release];
+    [_loginViewController release];
     [super dealloc];
 }
 
@@ -21,6 +22,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    if([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone){
+        self.loginViewController=[[[WFLoginViewViewController alloc] initWithNibName:@"WFLoginViewViewController" bundle:nil] autorelease];
+    }else{
+        self.loginViewController=[[[WFLoginViewViewController alloc] initWithNibName:@"WFLoginViewViewController_iphone" bundle:nil] autorelease];
+    }
+    self.window.rootViewController = self.loginViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

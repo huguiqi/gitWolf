@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WFLoginViewViewController.h"
 
 @interface WFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) WFLoginViewViewController *loginViewController;
+
 @end
+

@@ -16,6 +16,9 @@
 		223C26C2163D476400B07B50 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 223C26C1163D476400B07B50 /* Default.png */; };
 		223C26C4163D476400B07B50 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223C26C3163D476400B07B50 /* Default@2x.png */; };
 		223C26C6163D476400B07B50 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 223C26C5163D476400B07B50 /* Default-568h@2x.png */; };
+		223C26D0163D47C600B07B50 /* head_50.png in Resources */ = {isa = PBXBuildFile; fileRef = 223C26CF163D47C600B07B50 /* head_50.png */; };
+		223C26DC163D4EAE00B07B50 /* WFLoginViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223C26DA163D4EAE00B07B50 /* WFLoginViewViewController.m */; };
+		223C26DD163D4EAE00B07B50 /* WFLoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223C26DB163D4EAE00B07B50 /* WFLoginViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		223C26C1163D476400B07B50 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		223C26C3163D476400B07B50 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		223C26C5163D476400B07B50 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		223C26CF163D47C600B07B50 /* head_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_50.png; sourceTree = "<group>"; };
+		223C26D9163D4EAE00B07B50 /* WFLoginViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLoginViewViewController.h; sourceTree = "<group>"; };
+		223C26DA163D4EAE00B07B50 /* WFLoginViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLoginViewViewController.m; sourceTree = "<group>"; };
+		223C26DB163D4EAE00B07B50 /* WFLoginViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFLoginViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +85,9 @@
 		223C26B5163D476400B07B50 /* WolfShow */ = {
 			isa = PBXGroup;
 			children = (
+				223C26CE163D479100B07B50 /* Other Resources */,
+				223C26CD163D478600B07B50 /* Resources */,
+				223C26CC163D477600B07B50 /* Classes */,
 				223C26BE163D476400B07B50 /* WFAppDelegate.h */,
 				223C26BF163D476400B07B50 /* WFAppDelegate.m */,
 				223C26B6163D476400B07B50 /* Supporting Files */,
@@ -97,6 +107,47 @@
 				223C26C5163D476400B07B50 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		223C26CC163D477600B07B50 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				223C26D2163D4DA200B07B50 /* login */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		223C26CD163D478600B07B50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				223C26D1163D47CC00B07B50 /* img */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		223C26CE163D479100B07B50 /* Other Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Resources";
+			sourceTree = "<group>";
+		};
+		223C26D1163D47CC00B07B50 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				223C26CF163D47C600B07B50 /* head_50.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		223C26D2163D4DA200B07B50 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				223C26D9163D4EAE00B07B50 /* WFLoginViewViewController.h */,
+				223C26DA163D4EAE00B07B50 /* WFLoginViewViewController.m */,
+				223C26DB163D4EAE00B07B50 /* WFLoginViewViewController.xib */,
+			);
+			name = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +206,8 @@
 				223C26C2163D476400B07B50 /* Default.png in Resources */,
 				223C26C4163D476400B07B50 /* Default@2x.png in Resources */,
 				223C26C6163D476400B07B50 /* Default-568h@2x.png in Resources */,
+				223C26D0163D47C600B07B50 /* head_50.png in Resources */,
+				223C26DD163D4EAE00B07B50 /* WFLoginViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +220,7 @@
 			files = (
 				223C26BC163D476400B07B50 /* main.m in Sources */,
 				223C26C0163D476400B07B50 /* WFAppDelegate.m in Sources */,
+				223C26DC163D4EAE00B07B50 /* WFLoginViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +294,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WolfShow/WolfShow-Prefix.pch";
 				INFOPLIST_FILE = "WolfShow/WolfShow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,6 +306,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WolfShow/WolfShow-Prefix.pch";
 				INFOPLIST_FILE = "WolfShow/WolfShow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +331,7 @@
 				223C26CB163D476400B07B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
