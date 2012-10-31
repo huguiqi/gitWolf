@@ -16,4 +16,8 @@
 
 -(IBAction)clickSomething:(id)sender;
 
+-(IBAction)textFieldDoneEditing:(id)sender;
+
+-(IBAction)backgroupTap:(id)sender;
+
 @end

@@ -44,10 +44,26 @@
     
     NSString *userName = [userNameField text];
     NSString *password = [passwordFiled text];
-    NSLog(@"the userName is %@,and password is %@",userName,password);
-    
-    [userName dealloc];
-    [password dealloc];
+    NSLog(@"the userName is %@,and password is %@",userName,password);    
+}
+
+
+-(IBAction)textFieldDoneEditing:(id)sender{
+    [sender resignFirstResponder];
+}
+
+
+-(IBAction)backgroupTap:(id)sender{
+    //在非第一响应者的控件上调用第一响应者方法是绝对安全的
+    [userNameField resignFirstResponder];
+    [passwordFiled resignFirstResponder];
+}
+
+- (void)dealloc
+{
+    [userNameField release ];
+    [passwordFiled release ];
+    [super dealloc];
 }
 
 
