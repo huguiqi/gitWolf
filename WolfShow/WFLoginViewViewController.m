@@ -39,6 +39,10 @@
 
 @synthesize userNameField;
 @synthesize passwordFiled;
+@synthesize ageFiled;
+@synthesize switchON;
+@synthesize switchOFF;
+@synthesize buttonOK;
 
 -(IBAction)clickSomething:(id)sender{
     
@@ -59,10 +63,51 @@
     [passwordFiled resignFirstResponder];
 }
 
+-(IBAction)slideAgeChange:(id)sender{
+    //将响应者对象赋给定义的变量值
+    UISlider *slider = (UISlider *) sender;
+    int ageSender = (int)[slider value];
+    int age = ageSender+ 1;
+    if(age >100){
+        age = 100;
+    }
+    NSString *newText = [[NSString alloc] initWithFormat:@"%d",age];
+    ageFiled.text = newText;
+    [newText release];
+}
+
+-(IBAction)turnSwitchEvent:(id)sender{
+    
+    UISwitch *switchBtn = (UISwitch *)sender;
+    BOOL isOn = switchBtn.isOn;
+    [switchOFF setOn:isOn animated:YES];
+    [switchOFF setOn:isOn animated:YES];
+
+    
+}
+
+-(IBAction)toggleController:(id)sender{
+    NSLog(@"the selectedSegmentIndex is %@",[sender selectedSegmentIndex]);
+    if([sender selectedSegmentIndex] ==0){
+        switchON.hidden=NO;
+        switchOFF.hidden=YES;
+        buttonOK.hidden=NO;
+    }else{
+        switchON.hidden=YES;
+        switchOFF.hidden=NO;
+        buttonOK.hidden=YES;
+    }
+    
+}
+
 - (void)dealloc
 {
     [userNameField release ];
     [passwordFiled release ];
+    [ageFiled release];
+//    [switchON release];
+//    [switchOFF release];
+    [buttonOK release];
     [super dealloc];
 }
 

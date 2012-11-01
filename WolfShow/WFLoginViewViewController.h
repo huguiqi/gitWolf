@@ -14,10 +14,24 @@
 
 @property(nonatomic,retain) IBOutlet UITextField *passwordFiled;
 
+@property(nonatomic,retain) IBOutlet UITextField *ageFiled;
+
+@property(nonatomic,retain) IBOutlet UISwitch *switchON;
+
+@property(nonatomic,retain) IBOutlet UISwitch *switchOFF;
+
+@property(nonatomic,retain) IBOutlet UIButton *buttonOK;
+
 -(IBAction)clickSomething:(id)sender;
 
 -(IBAction)textFieldDoneEditing:(id)sender;
 
 -(IBAction)backgroupTap:(id)sender;
+
+-(IBAction)slideAgeChange:(id)sender;
+
+-(IBAction)turnSwitchEvent:(id)sender;
+
+-(IBAction)toggleController:(id)sender;
 
 @end
