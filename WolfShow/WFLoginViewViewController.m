@@ -78,8 +78,11 @@
 
 -(IBAction)turnSwitchEvent:(id)sender{
     
+    [self.navigationController popToViewController:self animated:YES];
+    
     UISwitch *switchBtn = (UISwitch *)sender;
-    BOOL isOn = switchBtn.isOn;
+    BOOL isOn = [switchBtn isOn];
+    NSLog(@"the selectedSegmentIndex is %@",isOn);
     [switchOFF setOn:isOn animated:YES];
     [switchOFF setOn:isOn animated:YES];
 
@@ -87,7 +90,6 @@
 }
 
 -(IBAction)toggleController:(id)sender{
-    NSLog(@"the selectedSegmentIndex is %@",[sender selectedSegmentIndex]);
     if([sender selectedSegmentIndex] ==0){
         switchON.hidden=NO;
         switchOFF.hidden=YES;
@@ -105,8 +107,8 @@
     [userNameField release ];
     [passwordFiled release ];
     [ageFiled release];
-//    [switchON release];
-//    [switchOFF release];
+    [switchON release];
+    [switchOFF release];
     [buttonOK release];
     [super dealloc];
 }
