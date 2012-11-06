@@ -19,13 +19,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
     }
+     
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UISwipeGestureRecognizer *tapGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tapGR.direction = UISwipeGestureRecognizerDirectionRight;
+    //    tapGR.delegate = self;
+    [self.cityListView addGestureRecognizer:tapGR];
+    [tapGR release];
+    
+    WFCityListViewController *cityListController=[[[WFCityListViewController alloc] initWithNibName:@"WFCityListViewController" bundle:nil] autorelease];
+    [self.cityListView addSubview:[cityListController view]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -82,9 +93,10 @@
     
     UISwitch *switchBtn = (UISwitch *)sender;
     BOOL isOn = [switchBtn isOn];
-    NSLog(@"the selectedSegmentIndex is %@",isOn);
+//    NSLog(@"the selectedSegmentIndex is %@",isOn);
     [switchOFF setOn:isOn animated:YES];
     [switchOFF setOn:isOn animated:YES];
+    [switchBtn release];
 
     
 }
@@ -101,6 +113,43 @@
     }
     
 }
+
+
+-(IBAction)showCityListView: (id)sender {
+    [UIView beginAnimations:@"showCityList" context:nil];
+    [UIView setAnimationRepeatCount:1];
+    [UIView setAnimationDuration:0.3];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    self.cityListView.frame = CGRectMake(35, 0.0, 285.0, 460.0);
+    [UIView commitAnimations];
+}
+
+- (void) handleTap:(UISwipeGestureRecognizer*)swipeRecognizer{
+    [UIView beginAnimations:@"showCityList" context:nil];
+    [UIView setAnimationRepeatCount:1];
+    [UIView setAnimationDuration:0.3];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    self.cityListView.frame = CGRectMake(320.0, 0.0, 285.0, 460.0);
+    [UIView commitAnimations];
+}
+
+
+//- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    CGPoint pt = [[touches anyObject] locationInView:self.cityListView];
+//    startLocation = pt;
+//    [[self.cityListView superview] bringSubviewToFront:self.cityListView];
+//}
+//
+//- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    [UIView beginAnimations:@"showPromotion" context:nil];
+//    [UIView setAnimationRepeatCount:1];
+//    [UIView setAnimationDuration:0.3];
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+//    self.cityListView.frame = CGRectMake(320, 0.0, 285.0, 460.0);
+//    [UIView commitAnimations];
+//    
+//}
 
 - (void)dealloc
 {

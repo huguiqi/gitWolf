@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22379A0F16480FD6003059DF /* WFCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22379A0D16480FD6003059DF /* WFCityListViewController.m */; };
+		22379A1016480FD6003059DF /* WFCityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22379A0E16480FD6003059DF /* WFCityListViewController.xib */; };
 		223C26B0163D476400B07B50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223C26AF163D476400B07B50 /* UIKit.framework */; };
 		223C26B2163D476400B07B50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223C26B1163D476400B07B50 /* Foundation.framework */; };
 		223C26B4163D476400B07B50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223C26B3163D476400B07B50 /* CoreGraphics.framework */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22379A0C16480FD6003059DF /* WFCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCityListViewController.h; sourceTree = "<group>"; };
+		22379A0D16480FD6003059DF /* WFCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCityListViewController.m; sourceTree = "<group>"; };
+		22379A0E16480FD6003059DF /* WFCityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFCityListViewController.xib; sourceTree = "<group>"; };
 		223C26AB163D476400B07B50 /* WolfShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WolfShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223C26AF163D476400B07B50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		223C26B1163D476400B07B50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22379A0A16480F8B003059DF /* city */ = {
+			isa = PBXGroup;
+			children = (
+				22379A0C16480FD6003059DF /* WFCityListViewController.h */,
+				22379A0D16480FD6003059DF /* WFCityListViewController.m */,
+				22379A0E16480FD6003059DF /* WFCityListViewController.xib */,
+			);
+			name = city;
+			sourceTree = "<group>";
+		};
 		223C26A0163D476400B07B50 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +127,7 @@
 		223C26CC163D477600B07B50 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				22379A0A16480F8B003059DF /* city */,
 				223C26D2163D4DA200B07B50 /* login */,
 			);
 			name = Classes;
@@ -208,6 +224,7 @@
 				223C26C6163D476400B07B50 /* Default-568h@2x.png in Resources */,
 				223C26D0163D47C600B07B50 /* head_50.png in Resources */,
 				223C26DD163D4EAE00B07B50 /* WFLoginViewViewController.xib in Resources */,
+				22379A1016480FD6003059DF /* WFCityListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +238,7 @@
 				223C26BC163D476400B07B50 /* main.m in Sources */,
 				223C26C0163D476400B07B50 /* WFAppDelegate.m in Sources */,
 				223C26DC163D4EAE00B07B50 /* WFLoginViewViewController.m in Sources */,
+				22379A0F16480FD6003059DF /* WFCityListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

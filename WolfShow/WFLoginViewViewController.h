@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WFCityListViewController;
 
 @interface WFLoginViewViewController : UIViewController
+{
+    CGPoint startLocation;
+}
 
 @property(nonatomic,retain) IBOutlet UITextField *userNameField;
 
@@ -22,6 +26,8 @@
 
 @property(nonatomic,retain) IBOutlet UIButton *buttonOK;
 
+@property(nonatomic,retain) IBOutlet UIView *cityListView;
+
 -(IBAction)clickSomething:(id)sender;
 
 -(IBAction)textFieldDoneEditing:(id)sender;
@@ -34,4 +40,5 @@
 
 -(IBAction)toggleController:(id)sender;
 
+  
 @end
