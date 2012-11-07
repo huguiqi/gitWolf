@@ -90,13 +90,6 @@
 -(IBAction)turnSwitchEvent:(id)sender{
     
     [self.navigationController popToViewController:self animated:YES];
-    
-    UISwitch *switchBtn = (UISwitch *)sender;
-    BOOL isOn = [switchBtn isOn];
-//    NSLog(@"the selectedSegmentIndex is %@",isOn);
-    [switchOFF setOn:isOn animated:YES];
-    [switchOFF setOn:isOn animated:YES];
-    [switchBtn release];
 
     
 }

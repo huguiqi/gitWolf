@@ -17,9 +17,10 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    
+    NSArray *listData = [[NSArray alloc] initWithObjects:@"上海",@"北京",@"深圳",@"长沙",@"昆明",@"厦门",@"南京", nil];
+    self.cityList=listData;
+    
     return self;
 }
 
@@ -27,6 +28,41 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.cityList count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+        static NSString *simpleIdentityStr = @"default value";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleIdentityStr ];
+
+    if(cell == nil){
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleIdentityStr];
+    }
+    NSInteger row = [indexPath row];
+    cell.textLabel.text = [self.cityList objectAtIndex:row];
+    return cell;
+}
+
+
+
+
+
+
+-(void)viewDidUnload
+{
+    cityList = nil;
+    [super viewDidUnload];
+}
+
+-(void)dealloc:(id)send
+{
+    [cityList release];
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
