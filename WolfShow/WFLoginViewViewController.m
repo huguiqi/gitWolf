@@ -6,6 +6,7 @@
 //  Copyright (c) 2012年 huguiqi. All rights reserved.
 //
 
+
 #import "WFLoginViewViewController.h"
 
 @interface WFLoginViewViewController ()
@@ -18,17 +19,17 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // Custom initializationclclc
 
     }
-     
+
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     UISwipeGestureRecognizer *tapGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     tapGR.direction = UISwipeGestureRecognizerDirectionRight;
     //    tapGR.delegate = self;
@@ -59,7 +60,9 @@
     
     NSString *userName = [userNameField text];
     NSString *password = [passwordFiled text];
-    NSLog(@"the userName is %@,and password is %@",userName,password);    
+    NSLog(@"the userName is %@,and password is %@",userName,password);
+
+
 }
 
 
@@ -113,6 +116,7 @@
     [UIView setAnimationRepeatCount:1];
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    //象这种需要CGRect对象就用CGRectMake来创建
     self.cityListView.frame = CGRectMake(35, 0.0, 285.0, 460.0);
     [UIView commitAnimations];
 }

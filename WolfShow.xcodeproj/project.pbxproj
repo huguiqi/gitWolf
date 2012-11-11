@@ -60,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BBDFA12F430459C71AEF40A /* sectionDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sectionDemo;
+			sourceTree = "<group>";
+		};
 		22379A0A16480F8B003059DF /* city */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +136,7 @@
 			children = (
 				22379A0A16480F8B003059DF /* city */,
 				223C26D2163D4DA200B07B50 /* login */,
+				1BBDFA12F430459C71AEF40A /* sectionDemo */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -312,7 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WolfShow/WolfShow-Prefix.pch";
 				INFOPLIST_FILE = "WolfShow/WolfShow-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -324,7 +332,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WolfShow/WolfShow-Prefix.pch";
 				INFOPLIST_FILE = "WolfShow/WolfShow-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
