@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WFCityListViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
-{
-    NSArray *cityList;
-}
 
 @property(nonatomic,retain) NSArray *cityList;
 

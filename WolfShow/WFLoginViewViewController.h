@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WFCityListViewController;
+#import "WFCityListViewController.h"
 
 @interface WFLoginViewViewController : UIViewController
 {
