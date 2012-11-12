@@ -61,8 +61,6 @@
         nameLabel.textColor = [[UIColor alloc] initWithRed:184 green:0 blue:46 alpha:1];
         nameLabel.text = @"xxxxxx";
         nameLabel.font = [[UIFont alloc] fontWithSize:14];
-        nameLabel.tag = kCFURLNameKey;
-
 
         [cell.contentView addSubview:nameLabel];
         cell.textLabel.text = @"hello,world";
@@ -100,16 +98,6 @@
 #pragma --mark tableViewDelegate-didSelectRowAtIndexPath,选中行时对应的事件方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSUInteger row = [indexPath row];
-    if (row == 0) {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                initWithTitle:@"one row"
-                      message:@"不让选第一行"
-                     delegate:nil cancelButtonTitle:@"yes,i did"
-            otherButtonTitles:nil];//此处有问题，不知道为啥,加了这个实现方法后就闪退
-        [alertView show];
-        [alertView release];
-    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
@@ -121,12 +109,12 @@
 
 
 - (void)viewDidUnload {
-    cityList = nil;
+    self.cityList = nil;
     [super viewDidUnload];
 }
 
 - (void)dealloc:(id)send {
-    [cityList release];
+    self.cityList = nil;
     [super dealloc];
 }
 

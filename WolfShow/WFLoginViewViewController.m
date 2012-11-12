@@ -36,7 +36,7 @@
     [self.cityListView addGestureRecognizer:tapGR];
     [tapGR release];
     
-    WFCityListViewController *cityListController=[[[WFCityListViewController alloc] initWithNibName:@"WFCityListViewController" bundle:nil] autorelease];
+    WFCityListViewController *cityListController=[[WFCityListViewController alloc] initWithNibName:@"WFCityListViewController" bundle:nil];
     [self.cityListView addSubview:[cityListController view]];
     // Do any additional setup after loading the view from its nib.
 }
